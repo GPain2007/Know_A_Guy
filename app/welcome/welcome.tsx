@@ -3,23 +3,28 @@ import Logo from "./TrimLogo.png";
 export function Welcome() {
   return (
     <main className="flex items-center justify-center pt-16 pb-4 bg-gradient-to-b from-[#dcf9cf] to-[#e29cb4] h-screen">
-      <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
-        <header className="flex flex-col items-center gap-9">
-          <div className="w-[500px] max-w-[100vw] p-4">
+      <div className="flex-1 flex flex-col items-center gap-16 landscape:gap-0 min-h-0">
+        <header className="flex flex-col items-center gap-9 landscape:gap-0">
+          <div className="w-[432px] landscape:sm:w-[revert] max-w-[100vw] p-4 ">
             <img
               src={Logo}
               alt="React Router"
-              className="block w-full dark:hidden"
+              className="block w-full dark:hidden sm:max-w-[400px] landscape:w-[232px] justify-center content-center"
             />
             <img
               src={Logo}
               alt="React Router"
-              className="hidden w-full dark:block"
+              className="hidden w-full dark:block sm:max-w-[400px] justify-center content-center"
             />
           </div>
         </header>
-        <section className="flex flex-col items-center gap-6">
-          <p></p>
+        <section className="flex flex-col items-center gap-6 text-4xl landscape:gap-0">
+          <p className="justify-items-center text-center content-center text-emerald-600 font-bold max-sm:text-2xl landscape:text-2xl ">
+            Oh I Know A Guy Website in the works! <br />
+            For detail quote feel free to contact us at: <br />
+            (737)259-5124 or{" "}
+            <a href="mailto:Javier@iknowaguy.com">Javier@iknowaguy.com</a>
+          </p>
         </section>
       </div>
     </main>
